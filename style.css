@@ -1,0 +1,115 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Стили для заголовка */
+.header {
+    position: relative;
+    overflow: hidden;
+    background: url('path/to/background-image.jpg') center center/cover;
+    height: 100vh; /* Высота экрана */
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+/* Стили для логотипа */
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Регулируйте высоту логотипа */
+}
+
+/* Стили для навигационного меню */
+.nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px; /* Расстояние между пунктами меню */
+}
+
+.nav-list a {
+    color: white; /* Цвет текста меню */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #4CAF50; /* Цвет при наведении */
+}
+
+/* Адаптивная вёрстка (для мобильных устройств) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    padding: 10px 0;
+    z-index: 1000;
+}
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.header-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.header-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.btn-voir-plus {
+    padding: 15px 30px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-voir-plus:hover {
+    background-color: #4CAF50;
+    color: white;
+}
